@@ -68,8 +68,7 @@ export default {
       this.externalScripts.splice(i, 1)
     },
     generate () {
-      var currentHost = window.location.host
-      var initScriptUrl = window.location.protocol + '//' + currentHost + '/static/bookmarklet-init.js'
+      var initScriptUrl = 'https://rawgit.com/nfleury/bookmarklet-generator/master/static/bookmarklet-init.js'
       var configString = JSON.stringify({script: this.script, urls: this.externalScripts})
       this.bScript = encodeURIComponent('var BOOKMARKLET_CONFIG = ' + configString + ';var s = document.createElement("script");s.type = "text/javascript";s.src="' + initScriptUrl + '";document.body.appendChild(s);')
     }
