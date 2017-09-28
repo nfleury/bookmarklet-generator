@@ -69,7 +69,7 @@ export default {
     },
     generate () {
       var currentHost = window.location.host
-      var initScriptUrl = 'http://' + currentHost + '/static/bookmarklet-init.js'
+      var initScriptUrl = window.location.protocol + '//' + currentHost + '/static/bookmarklet-init.js'
       var configString = JSON.stringify({script: this.script, urls: this.externalScripts})
       this.bScript = encodeURIComponent('var BOOKMARKLET_CONFIG = ' + configString + ';var s = document.createElement("script");s.type = "text/javascript";s.src="' + initScriptUrl + '";document.body.appendChild(s);')
     }
