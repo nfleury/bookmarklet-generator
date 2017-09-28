@@ -1,5 +1,7 @@
 # bookmarklet-generator
 
+Try it here: https://nfleury.github.io/bookmarklet-generator/
+
 > A bookmarket generator created with vue.js :)
 
 ## Build Setup
